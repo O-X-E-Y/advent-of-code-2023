@@ -16,13 +16,8 @@ pub mod day22;
 pub mod day23;
 pub mod day24;
 pub mod day25;
-pub mod day26;
-pub mod day27;
-pub mod day28;
-pub mod day29;
 pub mod day3;
-pub mod day30;
-pub mod day31;
+
 pub mod day4;
 pub mod day5;
 pub mod day6;
@@ -31,5 +26,7 @@ pub mod day8;
 pub mod day9;
 
 fn main() {
-    day1::two()
+    let result = day2::two();
+    
+    println!("result: {}", result)
 }

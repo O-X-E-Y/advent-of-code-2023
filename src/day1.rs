@@ -1,24 +1,22 @@
 use itertools::Itertools;
 
-pub fn one() {
+pub fn one() -> u32 {
     let input = std::fs::read_to_string("./input/1.txt").unwrap();
 
-    let result = input
+    input
         .lines()
         .map(|l| l.chars().filter(|c| c.is_digit(10)).collect::<Vec<_>>())
         .map(|v| match (v.first(), v.last()) {
             (Some(c1), Some(c2)) => 10 * ((*c1 as u32) - 48) + *c2 as u32 - 48,
             _ => 0,
         })
-        .sum::<u32>();
-
-    println!("result: {result}");
+        .sum()
 }
 
-pub fn two() {
+pub fn two() -> u32 {
     let input = std::fs::read_to_string("./input/1.txt").unwrap();
 
-    let result = input
+    input
         .lines()
         .map(|l| {
             l.chars()
@@ -44,7 +42,5 @@ pub fn two() {
             (Some(v1), Some(v2)) => 10 * v1 + v2,
             _ => 0,
         })
-        .sum::<u32>();
-
-    println!("result: {result}");
+        .sum()
 }
