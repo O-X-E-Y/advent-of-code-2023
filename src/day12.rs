@@ -1,7 +1,7 @@
 pub fn one() {
-    unimplemented!()
+    let _input = std::fs::read_to_string("./input/12.txt").unwrap();
 }
 
 pub fn two() {
-    unimplemented!()
+    let _input = std::fs::read_to_string("./input/12.txt").unwrap();
 }
