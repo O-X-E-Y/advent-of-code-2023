@@ -5,7 +5,7 @@ struct Game {
     id: u32,
     reds: Vec<u32>,
     greens: Vec<u32>,
-    blues: Vec<u32>
+    blues: Vec<u32>,
 }
 
 impl FromStr for Game {
@@ -74,7 +74,8 @@ impl Game {
 pub fn one() -> u32 {
     let input = std::fs::read_to_string("./input/2.txt").unwrap();
 
-    input.lines()
+    input
+        .lines()
         .map(Game::from_str)
         .flatten()
         .filter(|g| g.possible(12, 13, 14))
@@ -85,7 +86,8 @@ pub fn one() -> u32 {
 pub fn two() -> u32 {
     let input = std::fs::read_to_string("./input/2.txt").unwrap();
 
-    input.lines()
+    input
+        .lines()
         .map(Game::from_str)
         .flatten()
         .map(|g| g.power())

@@ -26,7 +26,7 @@ pub mod day8;
 pub mod day9;
 
 fn main() {
-    let result = day2::two();
-    
+    let result = day3::two();
+
     println!("result: {}", result)
 }
